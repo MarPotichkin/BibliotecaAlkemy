@@ -10,12 +10,12 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(String titulo, String autor, String ISBN, String genero, boolean disponible){
+    public Libro(String titulo, String autor, String ISBN, String genero){
         this.titulo  = titulo;
         this.autor = autor;
         this.ISBN = ISBN;
         this.genero = genero;
-        this.disponible = disponible;
+        this.disponible = true;
     }
 
     public String getTitulo() {
