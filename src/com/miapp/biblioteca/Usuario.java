@@ -10,10 +10,10 @@ public class Usuario {
     public Usuario(){
     }
 
-    public Usuario(String nombre, String id, ArrayList<Libro> librosPrestados) {
+    public Usuario(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
-        this.librosPrestados = librosPrestados;
+        this.librosPrestados = new ArrayList<>();
     }
 
     public String getNombre() {
