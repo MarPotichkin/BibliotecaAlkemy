@@ -43,4 +43,29 @@ public class LibroServicio {
             }
         }
     }
+
+    public Libro buscarLibroPorISBN(String ISBN) {
+        for (Libro libro: biblioteca){
+            if (libro.getISBN().equals(ISBN)){
+                return libro;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Libro> buscarLibrosPorTitulo(String titulo){
+        ArrayList<Libro> librosEncontrados = new ArrayList<>();
+        for (Libro libro : biblioteca) {
+            if(libro.getTitulo().equalsIgnoreCase(titulo)){
+                librosEncontrados.add(libro);
+            }
+        }
+        return librosEncontrados;
+    }
+
+    public boolean verificarDisponibilidad(Libro libro){
+        return libro.isDisponible();
+    }
+
+
 }
